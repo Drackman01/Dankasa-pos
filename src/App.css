@@ -1,0 +1,56 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f4f7f6; color: #24352e; }
+button, input { font: inherit; }
+.app { min-height: 100vh; }
+.sidebar { position: fixed; inset: 0 auto 0 0; width: 220px; background: white; padding: 24px 15px; border-right: 1px solid #e1e9e4; }
+.sidebar h2 { color: #14784e; font-size: 22px; }
+.muted { color: #78867f; font-size: 12px; }
+.nav { display: block; width: 100%; border: 0; background: white; text-align: left; padding: 13px; margin: 6px 0; border-radius: 8px; color: #52635a; cursor: pointer; }
+.nav.active { background: #e4f5eb; color: #14784e; font-weight: bold; }
+.workspace { margin-left: 220px; padding: 28px; max-width: 1500px; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 25px; }
+h1 { font-size: 23px; }
+.welcome { background: #14784e; color: white; padding: 24px; border-radius: 14px; margin-bottom: 20px; }
+.welcome h2 { font-size: 25px; margin: 10px 0; }
+.welcome p { font-size: 13px; }
+.metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 28px; }
+.metrics article, .panel { background: white; border: 1px solid #e2e9e5; border-radius: 12px; padding: 17px; }
+.metrics article span, .metrics article small { display: block; color: #718078; font-size: 12px; }
+.metrics article h2 { font-size: 23px; }
+.panel { margin-top: 14px; overflow: hidden; }
+input { padding: 11px; width: 100%; max-width: 340px; border: 1px solid #d8e2dc; border-radius: 7px; margin-bottom: 15px; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; min-width: 430px; border-collapse: collapse; text-align: left; }
+th, td { padding: 14px 10px; border-bottom: 1px solid #edf1ee; font-size: 12px; }
+th { color: #738078; background: #f7f9f8; }
+.low { color: #b66a0b; background: #fff0d9; padding: 5px 7px; border-radius: 5px; }
+.good { color: #14784e; background: #e4f5eb; padding: 5px 7px; border-radius: 5px; }
+@media (max-width: 700px) {
+  .sidebar { position: static; width: 100%; padding: 10px; }
+  .sidebar h2 { margin: 5px 0; }
+  .sidebar .muted { display: none; }
+  .sidebar button { display: inline-block; width: auto; margin: 3px 1px; padding: 10px 9px; }
+  .workspace { margin: 0; padding: 15px 12px; }
+  h1 { font-size: 18px; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .metrics article { padding: 12px; }
+  .metrics article h2 { font-size: 20px; }
+  .welcome { padding: 18px; }
+  .welcome h2 { font-size: 21px; }
+}
+
+.notice { padding: 12px; background: #e4f5eb; color: #14784e; border-radius: 8px; font-size: 13px; }
+.section-title { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 25px; }
+.section-title h2 { margin-bottom: 5px; }
+.primary { border: 0; border-radius: 7px; padding: 11px 15px; background: #14784e; color: white; font-weight: bold; cursor: pointer; }
+.form-panel { margin-bottom: 25px; }
+.form-panel h2 { margin-top: 0; }
+.product-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+.product-form label { display: flex; flex-direction: column; gap: 7px; font-size: 12px; font-weight: bold; color: #52635a; }
+.product-form input, .product-form select { width: 100%; max-width: none; margin: 0; padding: 12px; border: 1px solid #d8e2dc; border-radius: 7px; background: white; color: #24352e; }
+.product-form .submit { align-self: end; min-height: 42px; }
+.barcode { display: block; margin-top: 5px; color: #78867f; font-size: 10px; }
+@media (max-width: 700px) {
+  .product-form { grid-template-columns: 1fr; gap: 13px; }
+  .section-title { align-items: flex-start; }
+}
